@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="formstyle.css">
+  <title>Form | Letflix</title>
+</head>
+<body>
+  
+<!-- NAVBAR -->
+<nav>
+  <div class="left">
+    <a href="./home.html"><p>Home</p></a>
+  </div>
+  <ul class="navlinks">
+    <li><a href="drama.html">Dramas</a></li>
+    <li><a href="./Plans.html">Plans</a></li>
+    <li><a href="form.html" class="curr" >Subscription</a></li>
+    <li><a href="about.html"class="about">About</a>
+    <ul class="aboutdrop">
+      <li><a href="https://www.instagram.com/">Instagram</a></li>
+      <li><a href="https://www.Facebook.com/">Facebook</a></li>
+      <li><a href="https://www.Twitter.com/">Twitter</a></li>
+      <li><a href="./about.html">About Us</a></li>
+    </ul></li>
+  </ul>
+
+  <div class="burger">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+  </div>
+</nav>
+
+
+<!-- HERO -->
+<div class="hero">
+  <div class="herocon">
+    <h2>Subscription</h2>
+  <a href="home.html"><img src="./assets/LogoLetFlixTrans.png" alt="logo letflix" class="logobesar"></a>
+  </div>
+</div>
+
+
+<!-- FORM -->
+<div class="containerform">
+  <div class="formbox">
+    <h1>Subscription Form</h1>
+    <form action="" id = "form">
+      <div class="form-group">
+        <label for="">Full Name</label>
+        <input type="text" name = "name" placeholder="Full Name">
+      </div>
+      <div class="form-group">
+        <label for="">Email</label>
+        <input type="email" name = "email" placeholder="Letflix@email.com">
+      </div>
+      <div class="form-group">
+        <label for="">Password</label>
+        <input type="password" name = "password" placeholder="Insert Password">
+      </div>
+      <div class="form-group">
+        <label for="">Confirm Password</label>
+        <input type="password" name = "confirmpassword" placeholder="Insert Password">
+      </div>
+      <div class="form-group" class = "genders">
+        <label for="">Gender</label>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+      </div>
+      <div class="form-group" class = "custom-select">
+        <label for="">Plan</label>
+        <select name="planchoice" id = "">
+          <option value="">Choose Plan</option>
+          <option value="Diamond">Diamond</option>
+          <option value="Gold">Gold</option>
+          <option value="Silver">Silver</option>
+          </select>
+      </div>
+      <div class="form-group">
+        <input type="checkbox" name = "agreement" id="">
+        <label for="">I agree with terms and condition</label>
+      </div>
+  
+      <div id="error" class= "errormessage">
+      </div>
+
+      <div class="bottombuttons">
+        <input type="submit" value = "Submit" id = "submit">
+        <input type="reset" value ="Reset" id = "reset">
+      </div>
+     
+  
+    </form>
+  </div>
+  </div>
+  
+
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="left">
+      <p>Copyright Letflix 2020</p>
+    </div>
+    <div class="right">
+      <p>Contact us</p>
+      <a href="https://www.instagram.com/nonton_spongebob/?hl=en"><img src="./assets/InstagramIcon.png" alt="Instagram"></a>
+      <a href="https://www.apple.com/id/app-store/"><img src="./assets/Download on Appstore.png" alt="Appstore"></a>
+    </div>
+  </div>
+  <script src= "app.js">
+  </script>
+
+</body>
+</html>

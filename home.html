@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="homestyle.css">
+  <title>Home | Letflix</title>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <img src="./assets/LogoLetFlixTrans.png" alt="">
+</div>
+
+
+<!-- NAVBAR -->
+<nav>
+  <div class="left">
+    <div class="lbut">
+      <a href="./home.html"><p>Home</p></a>
+    </div>
+    
+  </div>
+  <ul class="navlinks">
+    <li><a href="drama.html">Dramas</a></li>
+    <li><a href="./Plans.html">Plans</a></li>
+    <li><a href="form.html">Subscription</a></li>
+    <li><a href="./about.html"  class="about">About</a>
+    <ul class="aboutdrop">
+      <li><a href="https://www.instagram.com/">Instagram</a></li>
+      <li><a href="https://www.facebook.com/">Facebook</a></li>
+      <li><a href="https://www.twitter.com/">Twitter</a></li>
+      <li><a href="./about.html">About Us</a></li>
+    </ul></li>
+  </ul>
+
+  <div class="burger">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+  </div>
+</nav>
+
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Our Top Dramas</h1>
+    <div class="img-slider">
+      <div class="slide active">
+        <img src="./assets/DramaHoriz/Drama1.png" alt="">
+        <div class="slideinfo">
+          <!-- <h2>Ready GO!</h2> -->
+          <!-- <p>Drama ini sangat bagus, karena keren!</p> -->
+        </div>
+      </div>
+      <div class="slide">
+        <img src="./assets/DramaHoriz/Drama2.png" alt="">
+        <div class="slideinfo">
+          <!-- <h2>18 Again</h2> -->
+          <!-- <p>Drama ini sangat bagus, karena keren!</p> -->
+        </div>
+      </div>
+      <div class="slide">
+        <img src="./assets/DramaHoriz/Drama3.png" alt="">
+        <div class="slideinfo">
+          <!-- <h2>Game of Thrones</h2> -->
+          <!-- <p>Drama ini sangat bagus, karena keren!</p> -->
+        </div>
+      </div>
+      <div class="slide">
+        <img src="./assets/DramaHoriz/Drama4.png" alt="">
+        <div class="slideinfo">
+          <!-- <h2>Crash Landing On You</h2> -->
+          <!-- <p>Drama ini sangat bagus, karena keren!</p> -->
+        </div>
+      </div>
+      <div class="slide">
+        <img src="./assets/DramaHoriz/Drama5.png" alt="">
+        <div class="slideinfo">
+          <!-- <h2>It's Okay Not To Be Okay</h2> -->
+          <!-- <p>Drama ini sangat bagus, karena keren!</p> -->
+        </div>
+      </div>
+      <div class="navigation">
+        <div class="btn active"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+      </div>
+    </div>
+    <div class="bothero">
+      <h2>
+        Your Number 1 Watching Buddy <br>
+        Watch Anywhere, Anytime
+      </h2>
+      <div class="sub">
+        <div class="subbutton">
+          <a href="Plans.html">Subscribe</a>
+        </div>  
+      </div>
+      
+    </div>
+  </div>
+
+<!-- CONTENT -->
+ <div class="content">
+
+   <div class="card1">
+     <div class="text">
+       <h2>Enjoy on your TV</h2>
+       <h3>Stream Letfix on your smart
+         TV to enjoy the full watching experience
+       </h3>
+     </div>
+     <div class="cardimg">
+      <img src="./assets/WatchonTV.png" alt=""> 
+     </div>
+     
+   </div>
+
+   <div class="card2">
+    <div class="text">
+      <h2>Download for offline</h2>
+      <h3>Download all your favoite Drama
+        and watch it anywhere you want
+      </h3>
+    </div>
+    <div class="cardimg">
+      <img src="./assets/Downloadforoffline.png" alt="">
+    </div>
+    
+  </div>
+
+  <div class="card3">
+    <div class="text">
+      <h2>Variety of selection</h2>
+      <h3>Hollywood, Bollywood, Korean, Mandarin
+        Thai, you name it, we got all of it!
+      </h3>
+    </div>
+    <div class="cardimg">
+       <img src="./assets/VarietySelection.png" alt="">
+    </div>
+   
+  </div>
+ </div>
+
+
+ <!-- FOOTER -->
+ <div class="footer">
+  <div class="left">
+    <p>Copyright Letflix 2020</p>
+  </div>
+  <div class="right">
+    <p>Contact us</p>
+    <a href="https://www.instagram.com/nonton_spongebob/?hl=en"><img src="./assets/InstagramIcon.png" alt="Instagram"></a>
+    <a href="https://www.apple.com/id/app-store/"><img src="./assets/Download on Appstore.png" alt="Appstore"></a>
+  </div>
+</div>
+
+  <script src= "app.js"></script>
+  <script type="text/javascript">
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
+
+    //Script for manual slider navigation
+    var manualNav = function(manual){
+      slides.forEach((slide)=>{
+        slide.classList.remove('active');
+        btns.forEach((btn)=>{
+          btn.classList.remove('active');
+        })
+      })
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn,i) => {
+      btn.addEventListener("click", ()=>{
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+
+    //Script for image slider autoplay
+    var repeat = function(activeClass){
+      let active = document.getElementsByClassName('active');
+      let i = 1;
+      var repeater = ()=> {
+        setTimeout(function(){
+
+          [...active].forEach((activeSlide)=>{
+            activeSlide.classList.remove('active');
+          })
+
+          slides[i].classList.add('active');
+          btns[i].classList.add('active');
+          i++;
+
+          if (slides.length == i){
+            i = 0;
+          }
+          if(i >= slides.length){
+            return;
+          }
+          repeater();
+        }, 8000);
+      }
+      repeater();
+    }
+    repeat();
+  </script>
+
+</body>
+</html>

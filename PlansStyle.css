@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: rgb(240, 240, 240);
+}
+/* NAVBAR */
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color:rgb(0, 110, 255);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.navlinks{
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+ul li{
+  list-style: none;
+}
+.burger{
+  display: none;
+  cursor: pointer;
+}
+.burger div{
+  width: 25px;
+  height: 3px;
+  background-color: rgb(240, 240, 240);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+nav a :hover{
+  transition: 0.3s ease;
+  transform: scale(1.2);
+  color: white;
+}
+
+.curr{
+  background-color: black;
+  padding: 0.5em;
+  border-radius: 20px;
+}
+
+/* dropdown*/
+ul li ul li{
+  display: none;
+}
+
+.navlinks :hover ul{
+  transition: 0.7s ease;
+  margin-top: 1em;
+}
+
+.navlinks :hover ul li{
+  display:flex;
+  flex-direction: column;
+  padding: 1em,1em;
+  margin-left: -2em;
+  transition: 0.2s ease;
+  border-radius: 10px;
+}
+/* end of dropdown */
+
+.navlinks :hover{
+  transition: 0.3s ease;
+  transform: scale(1.1);
+  color: white;
+}
+
+
+/* FOOTER */
+.footer{
+  height: 60px;
+  background-color: rgb(0, 110, 255);
+  display: flex;
+  justify-content: space-between;
+}
+.footer .left{
+  padding: 1em;
+  color: white;
+}
+
+.footer .left p{
+  margin-top: 8px;
+}
+
+.footer .right{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1em;
+  width: 250px;
+  color: white;
+  width: 20%;
+}
+.footer .right p{
+  margin-top: 8px;
+}
+
+.footer .right img{
+  height: 30px;
+}
+
+.footer a:hover{
+  transition: ease 0.6s;
+  transform: scale(1.1);
+}
+
+  /*Hero*/
+  .hero{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.521),black), url(./assets/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 600px;
+  }
+  
+  .herocon{
+    width: 100%;
+    height: 600px;
+    text-align: center;
+    color: white;
+    padding-top: 50px;
+  }
+  
+  .herocon h2{
+    text-align: center;
+    font-size: 3em;
+  }
+  
+  .herocon img{
+    height: 500px;
+    margin-top: -6em;
+  }
+  
+  .hero a :hover{
+    transition: ease 0.5s;
+    transform: scale(1.1);
+  }
+  
+/*Content*/
+.content-format
+{
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  width: 100%;
+  height: 1500px;
+}
+.subs-format
+{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 500px;
+}
+.subs-format:hover
+{
+  transition: 0.7s ease;
+  background-color: rgba(255, 255, 255, 0.178);
+}
+.leftSubs-content
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 500px;
+}
+.leftSubs-content h1
+{
+  font-size: 80px;
+}
+.leftSubs-content h1:hover, .subscribe-button:hover
+{
+  transition: 0.7s ease;
+  transform: scale(1.2);
+}
+.leftSubs-content h2:hover
+{
+  transition: 0.7s ease;
+  transform: scale(1.2);
+  padding: 10px;
+  border-radius: 40px;
+}
+#diamond-price:hover
+{
+  background-color: rgba(144, 227, 231, 0.4);
+}
+#gold-price:hover
+{
+  background-color: rgba(231, 215, 144, 0.4);
+}
+#silver-price:hover
+{
+  background-color: rgba(221, 221, 221, 0.4);
+}
+
+#diamond-subs:hover
+{
+  transition: 0.7s ease;
+  transform: scale(1.2);
+  background-color: rgba(144, 227, 231, 0.190);
+}
+#gold-subs:hover
+{
+  transition: 0.7s ease;
+  transform: scale(1.2);
+  background-color: rgba(231, 215, 144, 0.190);
+}
+#silver-subs:hover
+{
+  transition: 0.7s ease;
+  transform: scale(1.2);
+  background-color: rgb(221, 221, 221, 0.190);
+}
+
+.leftSubs-content h2
+{
+  font-size: 40px;
+}
+.rightSubs-content
+{
+  margin-top: 70px;
+  float: right;
+  width: 40%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 40px;
+}
+
+.rightSubs-content p
+{
+  font-size: 40px;
+  text-align: center;
+}
+
+.subscribe-button
+{
+  width: 25%;
+  height: 40px;
+  background-color: rgb(0, 119, 255);
+  border-radius: 20px;
+  align-self: center;
+  text-align: center;
+}
+
+.subscribe-button a
+{
+  font-size: 25px;
+  color: white;
+}
+
+/* buat mobile */
+@media screen and (max-width: 768px)
+{
+  body{
+    overflow-x: hidden;
+  }
+  .navlinks{
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 5vh;
+    background-color: rgb(0, 110, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .navlinks li{
+    opacity: 0;
+  }
+  .burger{
+    display: block;
+  }
+
+  .footer .right{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1em;
+    width: 250px;
+    color: white;
+    width: 50%;
+  }
+  .content-format
+  {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    height: 1800px;
+  }
+  .subs-format
+  {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 50px;
+  }
+  .subs-format:hover
+  {
+    transition: 0.8s ease forward;
+    transform: scale(1.2);
+    border-radius: 40px;
+    background-color: rgba(207, 207, 207, 0.226)
+  }
+  .leftSubs-content
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 100px;
+  }
+  .leftSubs-content h1
+  {
+    font-size: 60px;
+  }
+  .leftSubs-content h1:hover, .subscribe-button:hover
+  {
+    transition: 0.7s ease;
+    transform: scale(1.2);
+  }
+  .leftSubs-content h2:hover
+  {
+    transition: 0.7s ease;
+    transform: scale(1.2);
+    padding: 10px;
+    border-radius: 40px;
+  }
+  #diamond-price:hover
+  {
+    background-color: rgba(144, 227, 231, 0.4);
+  }
+  #gold-price:hover
+  {
+    background-color: rgba(231, 215, 144, 0.4);
+  }
+  #silver-price:hover
+  {
+    background-color: rgba(221, 221, 221, 0.4);
+  }
+
+  #diamond-subs:hover
+  {
+    transition: 0.7s ease;
+    transform: scale(1.3);
+    background-color: rgba(144, 227, 231, 0.190);
+  }
+  #gold-subs:hover
+  {
+    transition: 0.7s ease;
+    transform: scale(1.3);
+    background-color: rgba(231, 215, 144, 0.190);
+  }
+  #silver-subs:hover
+  {
+    transition: 0.7s ease;
+    transform: scale(1.3);
+    background-color: rgb(221, 221, 221, 0.190);
+  }
+
+  .leftSubs-content h2
+  {
+    position: relative;
+    top: -55px;
+    font-size: 25px;
+  }
+  .rightSubs-content
+  {
+    align-self: center;
+    width: 40%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+  }
+
+  .rightSubs-content p
+  {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .subscribe-button
+  {
+    width: 45%;
+    height: 35px;
+    background-color: rgb(0, 119, 255);
+    border-radius: 20px;
+    align-self: center;
+    text-align: center;
+  }
+
+  .subscribe-button a
+  {
+    font-size: 20px;
+    color: white;
+  }
+
+}
+/* biar rapih */
+@media screen and (max-width:1024px){
+  .navlinks{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+  }
+  .footer .right{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1em;
+    width: 250px;
+    color: white;
+    width: 40%;
+  }
+}
+.nav-active{
+  transform: translateX(0%);
+}
+
+/* FOR NAVBAR */
+@keyframes navLinkFade{
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}

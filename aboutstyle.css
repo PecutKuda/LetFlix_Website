@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: rgb(240, 240, 240);
+}
+
+/* NAVBAR */
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color:rgb(0, 110, 255);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+.navlinks{
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+ul li{
+  list-style: none;
+}
+.burger{
+  display: none;
+  cursor: pointer;
+}
+.burger div{
+  width: 25px;
+  height: 3px;
+  background-color: rgb(240, 240, 240);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+nav a :hover{
+  transition: 0.3s ease;
+  transform: scale(1.2);
+  color: white;
+}
+
+.curr{
+  background-color: black;
+  padding: 0.5em;
+  border-radius: 20px;
+}
+
+/* dropdown*/
+ul li ul li{
+  display: none;
+}
+
+.navlinks :hover ul{
+  transition: 0.7s ease;
+  margin-top: 1em;
+}
+
+.navlinks :hover ul li{
+  display:flex;
+  flex-direction: column;
+  padding: 1em,1em;
+  margin-left: -2em;
+  transition: 0.2s ease;
+  border-radius: 10px;
+  /* padding-left: 2em; */
+}
+/* end of dropdown */
+
+.navlinks :hover{
+  transition: 0.3s ease;
+  transform: scale(1.1);
+  color: white;
+  /* padding-left: 1em;
+  padding-right: 1em; */
+}
+
+
+/* FOOTER */
+.footer{
+  height: 60px;
+  background-color: rgb(0, 110, 255);
+  display: flex;
+  justify-content: space-between;
+}
+.footer .left{
+  padding: 1em;
+  color: white;
+}
+
+.footer .left p{
+  margin-top: 8px;
+}
+
+.footer .right{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1em;
+  width: 250px;
+  color: white;
+  width: 20%;
+}
+.footer .right p{
+  margin-top: 8px;
+}
+
+.footer .right img{
+  height: 30px;
+}
+
+.footer a:hover{
+  transition: ease 0.6s;
+  transform: scale(1.1);
+}
+
+
+.hero{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.521),black), url(./assets/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 600px;
+}
+
+.herocon{
+  width: 100%;
+  height: 600px;
+  text-align: center;
+  color: white;
+  padding-top: 50px;
+}
+
+.herocon h2{
+  text-align: center;
+  font-size: 3em;
+}
+
+.herocon img{
+  height: 500px;
+  margin-top: -6em;
+}
+
+.hero a :hover{
+  transition: ease 0.5s;
+  transform: scale(1.1);
+}
+
+/* history */
+.content1{
+  margin-left: 5em;
+  margin-right: 5em;
+  padding-bottom: 1em;
+  margin-top: 5em;
+}
+
+.content1 h3{
+  font-size: 2em;
+}
+
+/* ceo */
+.content2{
+  margin-left: 5em;
+  margin-right: 5em;
+  padding-bottom: 1em;
+}
+
+.content2 h3{
+  font-size: 2em;
+}
+
+.content2 .isicontent2{
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  width: 100%;
+}
+
+.content2 .isicontent2 img{
+  height: 200px;
+}
+.content2 .isicontent2 p{
+  width: 250px;
+  margin-top: 5em;
+  font-weight: bold;
+  margin-left: 1em;
+}
+
+/* culture */
+.content3{
+  margin-left: 5em;
+  margin-right: 5em;
+  padding-bottom: 1em;
+}
+.content3 h3{
+  font-size: 2em;
+}
+
+.content3 img{
+  width: 100%;
+  /* height: 150px */
+}
+
+/* careers */
+.content4{
+  margin-left: 5em;
+  margin-right: 5em;
+  padding-bottom: 1em;
+}
+
+.content4 h3{
+  font-size: 2em;
+}
+
+/* investor */
+.content5{
+  margin-left: 5em;
+  margin-right: 5em;
+  padding-bottom: 6em;
+}
+
+.content5 h3{
+  font-size: 2em;
+}
+
+.content5 .investors{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+}
+
+.content5 .investors img{
+  /* height: 60px; */
+  /* width: 120px; */
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.isicontent :hover{
+  transition: ease 0.4s;
+  transform: scale(1.1);
+}
+
+/* biar rapih */
+@media screen and (max-width:1024px){
+  .navlinks{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+  }
+  .footer .right{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1em;
+    width: 250px;
+    color: white;
+    width: 40%;
+  }
+}
+/* buat mobile */
+@media screen and (max-width: 768px){
+  body{
+    overflow-x: hidden;
+  }
+  .navlinks{
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 5vh;
+    background-color: rgb(0, 110, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .navlinks li{
+    opacity: 0;
+  }
+  .burger{
+    display: block;
+  }
+  .footer .right{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1em;
+    width: 250px;
+    color: white;
+    width: 50%;
+  }
+}
+
+
+.nav-active{
+  transform: translateX(0%);
+}
+/* FOR NAVBAR */
+@keyframes navLinkFade{
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+@media only screen and (min-width: 1080px){
+  .content1{
+    margin-left: 16em;
+    margin-right: 16em;
+    padding-bottom: 1em;
+  }
+  .content2{
+    margin-left: 16em;
+    margin-right: 16em;
+    padding-bottom: 1em;
+  }
+  .content3{
+    margin-left: 16em;
+    margin-right: 16em;
+    padding-bottom: 1em;
+  }
+  .content3 img{
+    width: auto;
+    height: 200px;
+  }
+  
+  .content4{
+    margin-left: 16em;
+    margin-right: 16em;
+    padding-bottom: 1em;
+  }
+  .content5{
+    margin-left: 16em;
+    margin-right: 16em;
+    padding-bottom: 6em;
+  }
+  .content5 .investors{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+  }
+  .content5 .investors img{
+    height: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
